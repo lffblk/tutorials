@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="Eclipselink_JPA" transaction-type="RESOURCE_LOCAL">
+        <class>com.lffblk.tutorials.jpa.entities.Employee</class>
+        <class>com.lffblk.tutorials.jpa.entities.advanced.singletable.SingleTableStaff</class>
+        <class>com.lffblk.tutorials.jpa.entities.advanced.singletable.TeachingSingleTableStaff</class>
+        <class>com.lffblk.tutorials.jpa.entities.advanced.singletable.NonTeachingSingleTableStaff</class>
+        <class>com.lffblk.tutorials.jpa.entities.advanced.joinedtable.JoinedTableStaff</class>
+        <class>com.lffblk.tutorials.jpa.entities.advanced.joinedtable.TeachingJoinedTableStaff</class>
+        <class>com.lffblk.tutorials.jpa.entities.advanced.joinedtable.NonTeachingJoinedTableStaff</class>
+        <class>com.lffblk.tutorials.jpa.entities.advanced.tableperclass.TablePerClassStaff</class>
+        <class>com.lffblk.tutorials.jpa.entities.advanced.tableperclass.TeachingTablePerClassStaff</class>
+        <class>com.lffblk.tutorials.jpa.entities.advanced.tableperclass.NonTeachingTablePerClassStaff</class>
+        <class>com.lffblk.tutorials.jpa.entities.relations.manytoone.ManyToOneEmployee</class>
+        <class>com.lffblk.tutorials.jpa.entities.relations.manytoone.ManyToOneDepartment</class>
+        <class>com.lffblk.tutorials.jpa.entities.relations.onetomany.OneToManyEmployee</class>
+        <class>com.lffblk.tutorials.jpa.entities.relations.onetomany.OneToManyDepartment</class>
+        <class>com.lffblk.tutorials.jpa.entities.relations.onetoone.OneToOneEmployee</class>
+        <class>com.lffblk.tutorials.jpa.entities.relations.onetoone.OneToOneDepartment</class>
+        <class>com.lffblk.tutorials.jpa.entities.relations.manytomany.Class</class>
+        <class>com.lffblk.tutorials.jpa.entities.relations.manytomany.Teacher</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:~/test"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="eclipselink.logging.level" value="OFF"/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>

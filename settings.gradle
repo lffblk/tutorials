@@ -1,0 +1,5 @@
+rootProject.name = 'Tutorials'
+
+include 'JPATutorial'
+include 'Java8Tutorial'
+
